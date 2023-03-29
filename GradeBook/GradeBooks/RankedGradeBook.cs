@@ -48,18 +48,18 @@ namespace GradeBook.GradeBooks
                         }
                     }
                 } while (change);
-                int pozycja = -1;
+                int position = -1;
                 for (int j = 0; j < Students.Count(); j++)
                 {
-                    if (table[j] == averageGrade) pozycja = j;
+                    if (table[j] == averageGrade) position = j;
                 }
-                if (pozycja >= Students.Count() * 0.8)
+                if (position >= Students.Count() * 0.8)
                     return 'A';
-                else if (pozycja >= Students.Count() * 0.6)
+                else if (position >= Students.Count() * 0.6)
                     return 'B';
-                else if (pozycja >= Students.Count() * 0.4)
+                else if (position >= Students.Count() * 0.4)
                     return 'C';
-                else if (pozycja >= Students.Count() * 0.2)
+                else if (position >= Students.Count() * 0.2)
                     return 'D';
                 else
                     return 'F';
