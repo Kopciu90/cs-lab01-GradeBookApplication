@@ -91,7 +91,7 @@ namespace GradeBook.UserInterfaces
         public static void AddStudentCommand(string command)
         {
             var parts = command.Split(' ');
-            if (parts.Length != 4)
+            if (parts.Length != 3)
             {
                 Console.WriteLine("Command not valid, Add requires a name, student type, and enrollment type.");
                 return;
