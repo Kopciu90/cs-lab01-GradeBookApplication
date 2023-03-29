@@ -111,54 +111,54 @@ __Note:__ This isn't the only way to accomplish implementation, however; this is
 			- If there are less than 5 students write "Ranked grading requires at least 5 students." to the Console.
 			- If there are 5 or more students call the base class's `CalculateStudentStatistics` method using `base.CalculateStudentStatistics`.
 
-	- [ ] Update `StartingUserInterface`'s `CreateCommand` method
-		- [ ] Update `CreateCommand`'s Conditions
+	- [x] Update `StartingUserInterface`'s `CreateCommand` method
+		- [x] Update `CreateCommand`'s Conditions
 			- When checking the `parts.Length` it should check that `parts.Length` is not 3.
 			- If `parts.Length` is not 3 write "Command not valid, Create requires a name and type of gradebook." to the Console.
-		- [ ] return a new GradeBook based on the provided type
+		- [x] return a new GradeBook based on the provided type
 			- If the value of `parts[2]` is "standard" return a newly instantiated `StandardGradeBook` using the `name` variable.
 			- If the value of `parts[2]` is "ranked" return a newly instantiated `RankedGradeBook` using the `name` variable.
 			- If the value of `parts[2]` doesn't match the above write the value of `parts[2]` followed by " is not a supported type of gradebook, please try again" to the console, then escape the method.
 
-	- [ ] Update `StartingUserInterfaces`'s `HelpCommand` method
-		- [ ] Change where `HelpCommand` outlines the "create" command to write "Create 'Name' 'Type' - Creates a new gradebook where 'Name' is the name of the gradebook and 'Type' is what type of grading it should use." to the console.
+	- [x] Update `StartingUserInterfaces`'s `HelpCommand` method
+		- [x] Change where `HelpCommand` outlines the "create" command to write "Create 'Name' 'Type' - Creates a new gradebook where 'Name' is the name of the gradebook and 'Type' is what type of grading it should use." to the console.
 
-	- [ ] Make the `BaseGradeBook` class abstract
-		- [ ] Add the `abstract` keyword to the `BaseGradeBook` declaration.
+	- [x] Make the `BaseGradeBook` class abstract
+		- [x] Add the `abstract` keyword to the `BaseGradeBook` declaration.
 
-- [ ] Add support for weighted GPAs
-	- [ ] Add `IsWeighted` property to `BaseGradeBook`
-		- [ ] Create a new `bool` property named `IsWeighted` in `BaseGradeBook`
+- [x] Add support for weighted GPAs
+	- [x] Add `IsWeighted` property to `BaseGradeBook`
+		- [x] Create a new `bool` property named `IsWeighted` in `BaseGradeBook`
 			- This should use the public access modifier.
 			- This should be of type `bool`.
 			- This should be named `IsWeighted`.
 
-	- [ ] Refactor constructor of `BaseGradeBook`
+	- [x] Refactor constructor of `BaseGradeBook`
 		_Note, once this group of tasks is begun the code will not compile until the entire group of tasks is complete._
-		- [ ] Add a `bool` to the `BaseGradeBook` constructor
+		- [x] Add a `bool` to the `BaseGradeBook` constructor
 			- This should be of type `bool`.
 			- This should be the second parameter.
-		- [ ] Set `IsWeight` in the `BaseGradeBook` constructor
+		- [x] Set `IsWeight` in the `BaseGradeBook` constructor
 			- [ ] Set the `IsWeighted` property using the `bool` parameter
-		- [ ] Add a `bool` to the `StandardGradeBook` constructor
+		- [x] Add a `bool` to the `StandardGradeBook` constructor
 			- This should be of type `bool`.
 			- This should be the second parameter.
 			- This will require the bool to be added to the call to the base constructor.
-		- [ ] Add a `bool` to the `RankedGradeBook` constructor
+		- [x] Add a `bool` to the `RankedGradeBook` constructor
 			- This should be of type `bool`.
 			- This should be the second parameter.
 			- This will require the bool to be added to the call to the base constructor.
-		- [ ] Update `StartingUserInterface.CreateCommand` condition
+		- [x] Update `StartingUserInterface.CreateCommand` condition
 			- Change the condition checking if `parts` is not equal to 3 to be is not equal to 4.
-		- [ ] Update `StartingUserInterface.CreateCommand` to accept `IsWeighted`
+		- [x] Update `StartingUserInterface.CreateCommand` to accept `IsWeighted`
 			- This should use `parts[3]` for the last parameter where the gradebooks are instantiated.
 			- Update the message provided by this condition to write to the console "Command not valid, Create requires a name, type of gradebook, if it's weighted (true / false).".
 
-	- [ ] Update `BaseGradeBook.GetGPA`
-		- [ ] Add 1 point to GPA when student is `Honors` or `DualEnrolled`
+	- [x] Update `BaseGradeBook.GetGPA`
+		- [x] Add 1 point to GPA when student is `Honors` or `DualEnrolled`
 
-	- [ ] Update `HelpCommand`
-		- [ ] Change where the `HelpCommand` outlines the "create" command to say "Create 'Name' 'Type' 'Weighted' - Creates a new gradebook where 'Name' is the name of the gradebook, 'Type' is what type of grading it should use, and 'Weighted' is whether or not grades should be weighted (true or false)."
+	- [x] Update `HelpCommand`
+		- [x] Change where the `HelpCommand` outlines the "create" command to say "Create 'Name' 'Type' 'Weighted' - Creates a new gradebook where 'Name' is the name of the gradebook, 'Type' is what type of grading it should use, and 'Weighted' is whether or not grades should be weighted (true or false)."
 
 ## What Now?
 
